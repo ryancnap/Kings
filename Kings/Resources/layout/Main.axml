@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@android:style/Theme.Material.Light"
+    tools:actionBarNavMode="list">
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="140.0dp"
+        android:id="@+id/TestView"
+        android:layout_marginTop="75.0dp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        android:alpha="50"
+        android:textAlignment="center"
+        android:layout_marginBottom="0.0dp" />
+    <Button
+        android:id="@+id/DrawCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="draw a card" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ImageCardView"
+        android:layout_marginLeft="0.0dp" />
+</LinearLayout>
