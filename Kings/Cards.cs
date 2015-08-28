@@ -1,4 +1,5 @@
 ﻿using Android;
+using Android.Content;
 using Kings;
 using System;
 using System.Collections.Generic;
@@ -62,13 +63,12 @@ class CardDeck
 
     // Using a List of Card objects as the deck container.
     public List<Card> deck = new List<Card>(52);
-
-
+    
     // fuckmefuckmefuckme
     public int GetCardImage(Card card)
     {
 
-        foreach (var _card in this.deck)
+        foreach (var _card in deck)
         {
             switch (_card.description)
             {
@@ -242,9 +242,8 @@ class CardDeck
         } // End foreach looping over every card in deck instance.
         return card.image;
     } // End GetCardImage method of deck.
-
-    // Once caller makes a new CardDeck instance, populateDeck will
-    // populate the deck...that's good naming right there.
+    
+    // To be called with a new CardDeck instance; fills deck with card object instances.
     public void populateDeck()
     {
         // Iterates over each sub-type in enumerated types Rank and Suit.
@@ -256,23 +255,7 @@ class CardDeck
             {
                 Card card = new Card(suit, rank);
                 card.image = GetCardImage(card);
-                /*switch(card.description)
-                {
-                    case "queen_of_hearts":
-                        card.image = Kings.Resource.Drawable.queen_of_hearts;
-                        break;
-                    case "king_of_spades":
-                        card.image = Kings.Resource.Drawable.king_of_spades;
-                        break;
-                    default:
-                        card.image = Kings.Resource.Drawable.Icon;
-                        break;
-
-
-                }*/
-
                 this.deck.Add(card);
-
             }
 
         }
@@ -299,6 +282,7 @@ class CardDeck
             int seed = rand.Next(0, _length);
             //if this.deck.contains() <- seems useful, let's keep this around
             Card card = this.deck.ElementAt(seed);
+            //GetCardImage(card);
 
             if (this.deck.Contains(card))
             {
