@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="DrawCard">Tap here to draw a card.</string>
+    <string name="DrawCard">Tap the center of the screen to draw a card.</string>
     <string name="ApplicationName">Kings</string>
+    <string name="PlayerRoster">Tap here to add players.</string>
 </resources>

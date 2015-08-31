@@ -9,41 +9,32 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android;
+using Kings;
 
 namespace Players
 {
     class Player
     {
-        // Create a class member array to store list of all players.
-        // Hey, asshole, move all this to a different module. You're shitting it up in here.
-        const int MAX_PLAYERS = 3;
-        static List<string> playerList = new List<string>();
 
-        // Takes a name and appends it to an array.
-        public List<string> generatePlayers()
+        // Store list of players
+        public List<string> roster = new List<string>();
+        //public StringBuilder builder = new StringBuilder();
+        private string name;
+
+        public string DisplayPlayerRoster()
         {
-         
-            foreach (var i in playerList)
-            {
-                string playerName = Console.ReadLine();
-                playerList.Add(playerName);
-            }
-            return playerList;
+            string combined = string.Join("\n", this.roster);
+            return combined;            
         }
 
-        public static void printPlayers()
+        // Constructor (some of these comments are here solely for my benefit).
+        // I think I'm doing ctors' wrong cause of the hoops I had to jump through
+        // when creating it in the MainActivity.
+        public Player(string name)
         {
-            // And then this sexy, functional beast down here!
-            playerList.ToList().ForEach(_player => Console.WriteLine(_player));
-            
-        }
+            this.name = name;
 
-        public Player()
-        {
-            
-         
-        } // End Player object constructor.
-
-
+        }       
     }
 }
