@@ -3,6 +3,7 @@
 WIP of the card game Kings Cup/Circle of Death in C#. 
 Built against Android 5.1 using the Xamarin framework
 
+![alt tag](https://www.facebook.com/photo.php?fbid=1028443753842352&set=a.102168179803252.4600.100000302107906&type=1&theater "King's Cup")
 
 Kings Cup uses a full deck of cards, and there's a lot of different version with their own rules.
 Essentially cards are dealt in a circle for everyone to choose from; everyone draws one card at a time,
